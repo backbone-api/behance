@@ -20,10 +20,13 @@
 <!-- init -->
 <script type="text/javascript">
 
-//var model = new Behance.Models.Project({
-//	api: "dgpAWsvElMXqSStVoa9asij6bEJWjiNf"
-//	
-//});
+Behance.set({
+	key: "NVBvLPd3PYK4uCgAjLEBBoXFGCdHQX3C"
+});
+
+//model.fetch();
+
+//console.log("model: ", model);
 
 var collection = new Behance.Collections.Projects(null, {
 	user: "ryndel"
@@ -33,7 +36,7 @@ collection.fetch();
 
 
 
-console.log("collection: ", collection);
+// console.log("collection: ", collection);
 
 </script>
 

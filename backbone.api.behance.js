@@ -20,7 +20,7 @@
 
 	// Base model - mainly used for setup options
 	var Behance = new Backbone.Model({
-		"key": "NVBvLPd3PYK4uCgAjLEBBoXFGCdHQX3C",
+		"key": null,
 		"api": api
 		// "uri": false
 	});
@@ -57,7 +57,11 @@
 	//
 	Behance.Models.Project = Behance.Model.extend({
 		// url: function(){ return api + "/projects/"+ this.id +".json" },
-		url: function(){ return Behance.get("api") + "/projects/"+ this.get("id") +"?api_key="+ Behance.get("key"); }, 
+		url: function(){ 
+			var url = Behance.get("api") + "/projects/"+ this.get("id") +"?api_key="+ Behance.get("key"); 
+			console.log("Url" + url);
+			return url;
+		}, 
 		defaults : {
 		},
 		
@@ -74,7 +78,7 @@
 		
 		url: function(){ 
 			var url = Behance.get("api") + "/users/"+ this.options.user + "/projects?api_key="+ Behance.get("key"); 
-			console.log( this.options );
+			// console.log( this.options );
 			return url;
 		}, 
 		
