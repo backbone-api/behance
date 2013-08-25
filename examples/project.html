@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+
+<h2>Get Project</h2>
+
+<div id="projects"><!-- --></div>
+
+
+<!-- dependencies -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+
+<! -- plugin -->
+<script type="text/javascript" src="../backbone.api.behance.js"></script>
+
+<!-- init -->
+<script type="text/javascript">
+
+//var model = new Behance.Models.Project({
+//	api: "dgpAWsvElMXqSStVoa9asij6bEJWjiNf"
+//	
+//});
+
+var collection = new Behance.Collections.Projects(null, {
+	user: "ryndel"
+});
+
+collection.fetch();
+
+
+
+console.log("collection: ", collection);
+
+</script>
+
+</html>
